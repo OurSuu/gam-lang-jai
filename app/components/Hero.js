@@ -55,9 +55,8 @@ export default function Hero() {
         {images.map((img, i) => (
           <div
             key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              i === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${i === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           >
             <Image
               src={img}
@@ -83,15 +82,15 @@ export default function Hero() {
             คือพลังที่ยิ่งใหญ่ที่สุด
           </h1>
           <p className="mt-3 md:mt-4 text-xs lg:text-sm text-gray-800 font-bold">
-            โครงการเพื่อสังคม ภายใต้มูลนิธิตังพ่อลอน
+            โครงการเพื่อสังคม ภายใต้มูลนิธิดั่งพ่อสอน
           </p>
-          
+
           <div className="mt-6 md:mt-8">
-            <button 
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E63946] text-white rounded-full text-xs font-bold hover:bg-primary-dark transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5"
             >
-              อ่านเพิ่มเติม 
+              อ่านเพิ่มเติม
               <svg className={`w-3 h-3 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -99,7 +98,7 @@ export default function Hero() {
 
             <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0 mt-0'}`}>
               <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 shadow-inner text-xs lg:text-sm text-gray-700 leading-relaxed text-left">
-                เรามุ่งมั่นเป็นสะพานเชื่อมโยงความดีระหว่าง &quot;ผู้ให้&quot; และ &quot;ผู้รับ&quot; ผ่าน โครงการเต็มใจ เพื่อสร้างสังคมแห่งการแบ่งปันที่ยั่งยืนต่อลมหายใจผู้ป่วยด้วยโลหิตที่ปลอดภัย 
+                เรามุ่งมั่นเป็นสะพานเชื่อมโยงความดีระหว่าง &quot;ผู้ให้&quot; และ &quot;ผู้รับ&quot; ผ่าน โครงการเต็มใจ เพื่อสร้างสังคมแห่งการแบ่งปันที่ยั่งยืน พร้อมต่อลมหายใจผู้ป่วยด้วยโลหิตที่ปลอดภัย
                 ส่งต่อความหวังให้ครอบครัว และสร้างความภาคภูมิใจให้ผู้บริจาค โดยมีผลิตภัณฑ์ &quot;น้ำกำลังใจ&quot; เป็นสื่อกลางแทนคำขอบคุณและร่วมรณรงค์ให้ทุกคนออกมาบริจาคเลือด
               </div>
             </div>

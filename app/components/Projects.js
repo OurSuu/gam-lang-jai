@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-function AnimatedNumber({ target, suffix = "" }) {
+function AnimatedNumber({ target, suffix = "", colorClass = "text-primary-dark" }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const animated = useRef(false);
@@ -34,7 +34,7 @@ function AnimatedNumber({ target, suffix = "" }) {
   }, [target]);
 
   return (
-    <span ref={ref} className="text-4xl lg:text-5xl font-black text-primary-dark">
+    <span ref={ref} className={`text-4xl lg:text-5xl font-black ${colorClass}`}>
       {count.toLocaleString()}{suffix}
     </span>
   );
@@ -62,16 +62,17 @@ export default function Projects() {
           </div>
           <div className="p-8 flex flex-col items-center text-center">
             <div className="w-20 h-20 mb-2 flex items-center justify-center text-[#2B4B8A]">
+              {/* Antenna SVG */}
               <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 14a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"/>
-                <path d="M16.24 7.76a6 6 0 010 8.49m-8.48 0a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14" />
-                <path d="M12 14v7" />
+                <path d="M12 14a2 2 0 100-4 2 2 0 000 4z" fill="#2B4B8A"/>
+                <path d="M16.24 7.76a6 6 0 010 8.49m-8.48 0a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14" stroke="#2B4B8A" strokeWidth="2"/>
+                <path d="M12 14v7" stroke="#2B4B8A" strokeWidth="2"/>
               </svg>
             </div>
             <div className="mb-1">
-              <AnimatedNumber target={50} />
+              <AnimatedNumber target={50} colorClass="text-[#5A101D]" />
             </div>
-            <p className="text-[11px] sm:text-xs text-gray-800 leading-relaxed font-medium">
+            <p className="text-[11px] sm:text-xs text-gray-800 leading-relaxed font-medium mt-1">
               ออกหน่วยและรับบริจาคเลือด
               <br />
               จัดบูธรับบริจาคโลหิต
@@ -86,20 +87,21 @@ export default function Projects() {
           </div>
           <div className="p-8 text-center flex flex-col items-center">
             <div className="w-20 h-20 mb-2 flex items-center justify-center text-[#E63946]">
+              {/* Hand with Heart SVG */}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="#FCA5A5" stroke="#E63946" strokeWidth="1"/>
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="#FBA6A6" stroke="#E63946" strokeWidth="1"/>
                 <path d="M7 14h.01M17 14h.01M12 18h.01" />
                 <path d="M12 22v-4" />
                 <path d="M10 22h4" />
               </svg>
             </div>
             <div className="mb-1">
-              <AnimatedNumber target={4500} />
+              <AnimatedNumber target={4500} colorClass="text-black" />
             </div>
-            <p className="text-[11px] sm:text-xs text-gray-800 leading-relaxed font-medium">
-              ผู้ป่วยได้รับเลือดอย่างเพียงพอ
+            <p className="text-[11px] sm:text-xs text-gray-800 leading-relaxed font-medium mt-1">
+              ผู้ป่วยที่ได้รับการช่วยเหลือ
               <br />
-              สมทบให้กับโรงพยาบาล
+              และต่อลมหายใจ
             </p>
           </div>
         </div>
@@ -114,7 +116,7 @@ export default function Projects() {
             <div className="w-full bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex items-center relative h-full min-h-[220px]">
               
               {/* Left Column: Text & Quote */}
-              <div className="w-[60%] md:w-[55%] pr-2 md:pr-4 relative z-10">
+              <div className="w-[65%] md:w-[60%] pr-2 md:pr-4 relative z-10">
                 {/* Dotted border decoration */}
                 <div className="absolute left-0 top-2 bottom-6 w-full border-l-2 border-b-2 border-dotted border-primary/30 rounded-bl-lg pointer-events-none"></div>
                 
@@ -140,7 +142,7 @@ export default function Projects() {
               </div>
 
               {/* Right Column: Bottle Image (Overflowing) */}
-              <div className="absolute right-[-10px] md:right-[-40px] top-1/2 -translate-y-1/2 flex justify-center items-center z-50 pointer-events-none">
+              <div className="absolute right-[-30px] md:right-[-60px] top-1/2 -translate-y-1/2 flex justify-center items-center z-50 pointer-events-none">
                 {/* Floating Hearts */}
                 <div className="absolute -left-2 md:-left-4 top-5 md:top-10 text-[#E63946] animate-pulse">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="md:w-6 md:h-6">
@@ -154,12 +156,12 @@ export default function Projects() {
                   width={400}
                   height={800}
                   className="object-contain drop-shadow-2xl animate-float-bottle"
-                  style={{ height: 'var(--bottle-height, 220px)', width: 'auto', maxWidth: 'none', transform: 'translateY(-10px)' }}
+                  style={{ height: 'var(--bottle-height, 180px)', width: 'auto', maxWidth: 'none', transform: 'translateY(-10px)' }}
                   unoptimized={true}
                 />
                 <style jsx>{`
                   @media (min-width: 768px) {
-                    img { --bottle-height: 380px !important; }
+                    img { --bottle-height: 320px !important; }
                   }
                 `}</style>
               </div>

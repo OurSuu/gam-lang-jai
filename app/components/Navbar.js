@@ -40,21 +40,21 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[90px] relative">
         {/* White Logo Box */}
-        <div className="absolute left-4 lg:left-6 top-0 h-[80px] lg:h-[100px] bg-white rounded-b-2xl lg:rounded-b-3xl px-4 lg:px-6 py-2 lg:py-3 flex items-center shadow-md">
-          <a href="#home" className="flex items-center gap-4">
+        <div className="absolute left-4 lg:left-6 top-0 h-[90px] lg:h-[130px] bg-white rounded-b-2xl lg:rounded-b-3xl px-6 lg:px-8 py-2 lg:py-3 flex items-center shadow-md">
+          <a href="#home" className="flex items-center">
             <Image
-              src="/images/logo2.png"
-              alt="Foundation Logos"
+              src="/images/logo.png"
+              alt="Kamlangjai Logo"
               width={200}
-              height={70}
-              className="h-10 lg:h-14 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              height={200}
+              className="h-[75px] lg:h-[110px] w-auto object-contain hover:scale-105 transition-transform duration-300"
               priority
             />
           </a>
         </div>
 
         {/* Spacer for Logo Box */}
-        <div className="w-[120px] lg:w-[200px]"></div>
+        <div className="w-[140px] lg:w-[220px]"></div>
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-2">

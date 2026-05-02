@@ -46,7 +46,7 @@ export default function About() {
             เกี่ยวกับเรา
           </h2>
           <p className="text-[13px] md:text-[15px] leading-[1.8] text-gray-800 font-medium mb-6">
-            เรามุ่งมั่นเป็นสะพานเชื่อมโยงความดีระหว่าง &quot;ผู้ให้&quot; และ &quot;ผู้รับ&quot; ผ่าน โครงการเต็มใจ เพื่อสร้างสังคมแห่งการแบ่งปันที่ยั่งยืนต่อลมหายใจผู้ป่วยด้วยโลหิตที่ปลอดภัย
+            เรามุ่งมั่นเป็นสะพานเชื่อมโยงความดีระหว่าง &quot;ผู้ให้&quot; และ &quot;ผู้รับ&quot; ผ่าน โครงการเต็มใจ เพื่อสร้างสังคมแห่งการแบ่งปันที่ยั่งยืน พร้อมต่อลมหายใจผู้ป่วยด้วยโลหิตที่ปลอดภัย
           </p>
           <a href="#projects" className="inline-block text-[#8B1A2B] text-[14px] font-bold underline decoration-2 underline-offset-4 hover:text-primary-light transition-colors">
             เรียนรู้เพิ่มเติม ทางคอมพิวเตอร์ &gt;
@@ -56,7 +56,7 @@ export default function About() {
         {/* Right Column */}
         <div className="md:pt-14 animate-fade-in-up delay-200">
           <p className="text-[13px] md:text-[15px] leading-[1.8] text-gray-800 font-medium mb-6">
-            โครงการเพื่อสังคม ภายใต้มูลนิธิตังพ่อลอนพาพวกเรา<br className="hidden md:block"/>
+            โครงการเพื่อสังคม ภายใต้มูลนิธิดั่งพ่อสอนพาพวกเรา<br className="hidden md:block" />
             ผลักดันและเผยแพร่ ผลิตภัณฑ์ &quot;น้ำกำลังใจ&quot;
           </p>
           <a
