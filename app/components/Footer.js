@@ -28,7 +28,7 @@ export default function Footer() {
           {/* New Contact Info */}
           <div className="w-full lg:w-fit mx-auto lg:mx-0 lg:ml-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 text-base font-medium w-fit mx-auto lg:mx-0">
-              
+
               {/* Email */}
               <div className="flex items-center gap-4 hover:text-white/80 transition-colors cursor-pointer">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#FFD600] via-[#FF004E] to-[#8A2387] flex items-center justify-center shadow-md flex-shrink-0">
@@ -78,7 +78,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex justify-center items-center pt-8 text-[11px] text-white/50">
-          <p>https://discord.com/scsreenshop</p>
+          <p>น้ำกำลังใจ เพื่อผู้ป่วย</p>
         </div>
       </div>
     </footer>
