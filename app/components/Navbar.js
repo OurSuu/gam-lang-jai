@@ -32,29 +32,27 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#8B1A2B] shadow-lg"
-          : "bg-[#8B1A2B] shadow-sm"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
+        ? "bg-[#8B1A2B] shadow-lg"
+        : "bg-[#8B1A2B] shadow-sm"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[90px] relative">
         {/* White Logo Box */}
-        <div className="absolute left-4 lg:left-6 top-0 h-[90px] lg:h-[130px] bg-white rounded-b-2xl lg:rounded-b-3xl px-6 lg:px-8 py-2 lg:py-3 flex items-center shadow-md">
-          <a href="#home" className="flex items-center">
+        <div className="absolute left-4 lg:left-6 top-0 w-[90px] lg:w-[180px] h-[60px] lg:h-[95px] bg-white rounded-b-2xl lg:rounded-b-3xl flex items-center justify-center shadow-md overflow-hidden">
+          <a href="#home" className="relative w-full h-full flex items-center justify-center">
             <Image
               src="/images/logo.png"
               alt="Kamlangjai Logo"
-              width={200}
-              height={200}
-              className="h-[75px] lg:h-[110px] w-auto object-contain hover:scale-105 transition-transform duration-300"
+              fill
+              className="object-contain hover:scale-110 transition-transform duration-300 scale-[1.15]"
               priority
             />
           </a>
         </div>
 
         {/* Spacer for Logo Box */}
-        <div className="w-[140px] lg:w-[220px]"></div>
+        <div className="w-[100px] lg:w-[190px]"></div>
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-2">
@@ -62,11 +60,10 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeSection === link.href.slice(1)
-                    ? "text-white bg-white/20"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
-                }`}
+                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeSection === link.href.slice(1)
+                  ? "text-white bg-white/20"
+                  : "text-white/80 hover:text-white hover:bg-white/10"
+                  }`}
               >
                 {link.label}
               </a>
@@ -81,28 +78,24 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${
-              isOpen ? "rotate-45 translate-y-2" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${isOpen ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
           />
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-[90px] left-0 w-full bg-white shadow-lg transition-all duration-300 ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-        }`}
+        className={`lg:hidden absolute top-[90px] left-0 w-full bg-white shadow-lg transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          }`}
       >
         <ul className="flex flex-col p-4 gap-1">
           {links.map((link) => (
@@ -110,11 +103,10 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                  activeSection === link.href.slice(1)
-                    ? "text-primary bg-primary/5"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`}
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${activeSection === link.href.slice(1)
+                  ? "text-primary bg-primary/5"
+                  : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                  }`}
               >
                 {link.label}
               </a>

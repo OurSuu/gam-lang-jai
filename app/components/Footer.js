@@ -9,19 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pb-8 border-b border-white/15 items-center">
           {/* Logos in White Box */}
           <div className="bg-white rounded-3xl p-6 lg:p-8 flex items-center justify-center gap-6 lg:gap-8 shadow-lg max-w-md mx-auto lg:mx-0 w-full lg:w-auto">
-            <Image
-              src="/images/logo.png"
-              alt="Foundation Logo 1"
-              width={150}
-              height={150}
-              className="h-16 lg:h-[90px] w-auto object-contain"
-            />
+
             <Image
               src="/images/logo2.png"
               alt="Foundation Logo 2"
               width={150}
               height={150}
-              className="h-16 lg:h-[90px] w-auto object-contain"
+              className="h-16 lg:h-[160px] w-auto object-contain"
             />
           </div>
 
